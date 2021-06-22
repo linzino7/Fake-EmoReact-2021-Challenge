@@ -17,9 +17,9 @@ https://competitions.codalab.org/competitions/31180?secret_key=2f97f399-8bba-4ed
 # eval 
 BERT-Base (L-12_H-768_A-12) + dropout + classifier
 
-Precision score : 0.7394(18)
-Recall score : 0.6664(13)
-F1 score: 0.6353(14)
+* Precision score : 0.7394(18)
+* Recall score : 0.6664(13)
+* F1 score: 0.6353(14)
 
 
 
