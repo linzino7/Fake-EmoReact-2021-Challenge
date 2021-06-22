@@ -26,6 +26,7 @@ BERT-Base (L-12_H-768_A-12)
 * F1 score: 0.6353(14)
 
 
-
+# Detial
+https://github.com/linzino7/Fake-EmoReact-2021-Challenge/blob/main/NLP_Fakenews.pdf
 
 
