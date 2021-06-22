@@ -50,15 +50,3 @@ Model saved to ==> ./Model/metrics_mr.pt
 Finished Training!
 Model loaded from <== ./Model/metrics_mr.pt
 finish training 2021-06-01 20:05:48.615681
-Traceback (most recent call last):
-  File "nlp_bert_on_fake_news_detection_rep.py", line 299, in <module>
-    load_checkpoint(destination_folder + '/model_mr.pt', best_model)
-  File "nlp_bert_on_fake_news_detection_rep.py", line 129, in load_checkpoint
-    state_dict = torch.load(load_path, map_location=device)
-  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 579, in load
-    with _open_file_like(f, 'rb') as opened_file:
-  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
-    return _open_file(name_or_buffer, mode)
-  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
-    super(_open_file, self).__init__(open(name, mode))
-FileNotFoundError: [Errno 2] No such file or directory: './Model/model_mr.pt'
