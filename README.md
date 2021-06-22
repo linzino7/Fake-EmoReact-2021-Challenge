@@ -1,8 +1,12 @@
 # Fake-EmoReact 2021 Challenge (Student)
 https://competitions.codalab.org/competitions/31180?secret_key=2f97f399-8bba-4ed5-a0b7-99e17df1fe1b#participate
 
+
 # model 
 BERT-Base (L-12_H-768_A-12) + dropout + classifier
+
+# Confusion_Matrix
+![](https://i.imgur.com/6egfWc4.png)
 
 # testing 
 
