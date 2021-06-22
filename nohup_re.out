@@ -1,0 +1,64 @@
+Token indices sequence length is longer than the specified maximum sequence length for this model (633 > 512). Running this sequence through the model will result in indexing errors
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+starting 2021-06-01 15:56:07.923958
+cuda:0
+finish preprocess 2021-06-01 15:58:51.771351
+Epoch [1/10], Step [2110/21100], Train Loss: 0.0268, Valid Loss: 0.0226
+training time : 2021-06-01 16:21:18.983688
+Model saved to ==> ./Model/model_mr0.pt
+Model saved to ==> ./Model/metrics_mr0.pt
+Epoch [2/10], Step [4220/21100], Train Loss: 0.0076, Valid Loss: 0.0124
+training time : 2021-06-01 16:43:53.906651
+Model saved to ==> ./Model/model_mr1.pt
+Model saved to ==> ./Model/metrics_mr1.pt
+Epoch [3/10], Step [6330/21100], Train Loss: 0.0036, Valid Loss: 0.0110
+training time : 2021-06-01 17:06:28.616503
+Model saved to ==> ./Model/model_mr2.pt
+Model saved to ==> ./Model/metrics_mr2.pt
+Epoch [4/10], Step [8440/21100], Train Loss: 0.0019, Valid Loss: 0.0082
+training time : 2021-06-01 17:29:04.582534
+Model saved to ==> ./Model/model_mr3.pt
+Model saved to ==> ./Model/metrics_mr3.pt
+Epoch [5/10], Step [10550/21100], Train Loss: 0.0019, Valid Loss: 0.0405
+training time : 2021-06-01 17:51:41.014821
+Epoch [6/10], Step [12660/21100], Train Loss: 0.0020, Valid Loss: 0.0121
+training time : 2021-06-01 18:14:13.480641
+Epoch [7/10], Step [14770/21100], Train Loss: 0.0013, Valid Loss: 0.0161
+training time : 2021-06-01 18:36:47.131275
+Epoch [8/10], Step [16880/21100], Train Loss: 0.0009, Valid Loss: 0.0063
+training time : 2021-06-01 18:59:30.177403
+Model saved to ==> ./Model/model_mr7.pt
+Model saved to ==> ./Model/metrics_mr7.pt
+Epoch [9/10], Step [18990/21100], Train Loss: 0.0007, Valid Loss: 0.0055
+training time : 2021-06-01 19:22:23.939074
+Model saved to ==> ./Model/model_mr8.pt
+Model saved to ==> ./Model/metrics_mr8.pt
+Epoch [10/10], Step [21100/21100], Train Loss: 0.0015, Valid Loss: 0.0055
+training time : 2021-06-01 19:45:21.780647
+Model saved to ==> ./Model/model_mr9.pt
+Model saved to ==> ./Model/metrics_mr9.pt
+Model saved to ==> ./Model/metrics_mr.pt
+Finished Training!
+Model loaded from <== ./Model/metrics_mr.pt
+finish training 2021-06-01 20:05:48.615681
+Traceback (most recent call last):
+  File "nlp_bert_on_fake_news_detection_rep.py", line 299, in <module>
+    load_checkpoint(destination_folder + '/model_mr.pt', best_model)
+  File "nlp_bert_on_fake_news_detection_rep.py", line 129, in load_checkpoint
+    state_dict = torch.load(load_path, map_location=device)
+  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 579, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/mnt/nas/homes/zino/torch1.8_cu11.0/lib/python3.6/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './Model/model_mr.pt'
