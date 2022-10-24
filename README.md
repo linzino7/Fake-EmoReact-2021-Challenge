@@ -25,6 +25,7 @@ BERT-Base (L-12_H-768_A-12)
 * Recall score : 0.6664(13)
 * F1 score: 0.6353(14)
 
+Top 14 in class.
 
 # Detial
 https://github.com/linzino7/Fake-EmoReact-2021-Challenge/blob/main/NLP_Fakenews.pdf
